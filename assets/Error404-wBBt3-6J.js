@@ -1,0 +1,1 @@
+import{_ as e,g as r,o as s,f as o,l as t,m as a}from"./index-BJRvKRCp.js";const c={class:"error"},_=["src"],n={__name:"Error404",setup(l){return(d,m)=>(s(),r("div",c,[o("img",{src:t(a)("404"),alt:"404"},null,8,_)]))}},f=e(n,[["__scopeId","data-v-ebd1c831"]]);export{f as default};
