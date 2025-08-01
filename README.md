@@ -1,6 +1,6 @@
 # Vue3 后台管理系统
 
-基于 Vue3 + Vite + Element Plus 的后台管理系统模板，支持动态菜单、权限管理、Mock 数据、响应式布局，适合学习和二次开发。
+基于 Vue3 + Vite + Element Plus 的后台管理系统模板，支持动态菜单、权限管理、Mock 数据、响应式布局，适合学习和二次开发。[项目访问地址](https://mr217zsw.github.io/study/)
 
 ## 特性
 
@@ -57,6 +57,61 @@
 
    ```sh
    npm run build
+   ```
+
+## 如何将自己的项目部署到 GitHub Pages
+
+1. 初始化 git 仓库，添加你的远程仓库
+
+   ```sh
+   git init
+   git remote add origin https://github.com/你的用户名/你的仓库名.git
+   ```
+
+2. 推送代码到 GitHub
+
+   ```sh
+   git add .
+   git commit -m "init"
+   git push -u origin main
+   ```
+
+3. 将 dist/ 部署到 GitHub Pages(推荐用 gh-pages 插件部署)
+
+   - 安装插件
+
+   ```sh
+   npm install gh-pages -D
+   ```
+
+   - 修改 vite.config.js
+
+   ```js
+   export default defineConfig({
+     // 注意修改成你的仓库名
+     base: "/your-project/",
+     plugins: [vue()],
+     resolve: {
+       alias: {
+         "@": path.resolve(__dirname, "./src"),
+       },
+     },
+   });
+   ```
+
+   - package.json 添加脚本
+
+   ```json
+   "scripts": {
+   "deploy": "gh-pages -d dist"
+   }
+   ```
+
+   - 最后执行脚本
+
+   ```sh
+   npm run build
+   npm run deploy
    ```
 
 ## 技术栈
